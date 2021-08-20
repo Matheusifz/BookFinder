@@ -1,3 +1,7 @@
-const App = () => <h1>DALE</h1>;
+import Input from "./components/Input";
+
+const App = () => {
+  return <Input />;
+};
 
 export default App;

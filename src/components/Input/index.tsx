@@ -4,7 +4,7 @@ const Input: React.FC = () => {
   const [query, setQuery] = useState("");
   return (
     <input
-      value={query} 
+      value={query}
       onChange={(event) => setQuery(event.target.value)}
     ></input>
   );

@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
+import "./style.css";
 
 interface Book {
-  volumeInfo: {title:string; imageLinks: {smallThumbnail:string}};
+  volumeInfo: {
+    title: string;
+    imageLinks: { smallThumbnail: string };
+    description: string;
+  };
   id: string;
 }
 const App = () => {
@@ -49,8 +54,9 @@ const App = () => {
       </form>
       {books.map((book: Book) => (
         <div key={book.id}>
-        <h1 >{book.volumeInfo.title}</h1>
-        <img src={book.volumeInfo.imageLinks?.smallThumbnail} alt="" />
+          <h1>{book.volumeInfo.title}</h1>
+          <img src={book.volumeInfo.imageLinks?.smallThumbnail} alt="" />
+          <p>{book.volumeInfo.description}</p>
         </div>
       ))}
     </div>
